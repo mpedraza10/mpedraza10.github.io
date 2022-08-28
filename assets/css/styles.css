@@ -1,5 +1,76 @@
-body {
-    font-family: 'Nunito', sans-serif;
+/* Hero Section */ 
+
+.hero {
+    height: 100vh;
+}
+
+.hero-background {
+    height: inherit;
+    background-color: #091540;
+}
+
+.hero-container {
+    height: inherit;
+    background-color: #F8F7F9;
+    display: flex;
+    align-items: center;
+    clip-path: polygon(0 0, 0 100%, 40% 100%, 100% 10%, 100% 0);
+}
+
+.hero-content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.hero-info {
+    width: 50rem;
+}
+
+.hero-info h1 {
     margin: 0;
-    padding: 0;
+    font-size: 4.5rem;    
+    color: #091540;
+}
+
+.hero-info h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #6A7FDB;
+}
+
+.hero-info p {
+    margin: 0.75rem 0 1.875rem 0;
+}
+
+.hero-btns {
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-btns .btn {
+    text-decoration: none;
+    padding: 0.5rem 1.875rem;
+    border-radius: 6px;
+}
+
+#projects-btn {
+    border: 1px solid #091540;
+    color: #091540;
+}
+
+#projects-btn:hover {
+    background-color: #091540;
+    color: #F8F7F9;
+}
+
+#contact-btn {
+    border: 1px solid #091540;
+    background-color: #091540;
+    color: #F8F7F9;
+}
+
+#contact-btn:hover {
+    color: #091540;
+    background-color: #F8F7F9;
 }

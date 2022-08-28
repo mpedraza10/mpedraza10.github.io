@@ -1,0 +1,56 @@
+/* Global changes */ 
+* {
+    box-sizing: border-box;
+    color: #1A1A1A;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #F8F7F9;
+    font-size: 1.5rem;
+}
+
+/* Header Nav Section */ 
+
+header {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header .container {
+    width: 90%;
+    height: inherit;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {    
+    text-decoration: none;
+    font-size: 1.125rem;
+}
+
+#logo {
+    font-size: 1.25rem;
+    color: #091540;
+}
+
+#logo span {
+    font-size: 1.875rem;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header li {
+    margin-right: 2.5rem;
+}
