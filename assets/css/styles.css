@@ -1,10 +1,11 @@
-/* Global Section */ 
+/* --------------------------------------- Global Section --------------------------------------- */ 
 
 section {
     height: 100vh;
+    margin-bottom: 10rem;
 }
 
-/* Hero Section */ 
+/* --------------------------------------- Hero Section --------------------------------------- */ 
 
 .hero-background {
     height: inherit;
@@ -77,86 +78,7 @@ section {
     background-color: #F8F7F9;    
 }
 
-@media (max-width: 87.5rem) {
-    .hero-info {
-        width: 37rem;
-    }
-
-    .hero-info h1 {
-        font-size: 3.5rem;            
-    }
-    
-    .hero-info h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 75rem) {
-    .hero-info {
-        width: 20rem;
-    }
-
-    .hero-info h1 {
-        font-size: 3rem;            
-    }
-    
-    .hero-info h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero-btns { 
-        width: 20rem;
-    }
-}
-
-@media (max-width: 56.25rem) {
-    .hero-container {        
-        /* align-items: flex-start; */
-        clip-path: polygon(0 0%, 0 100%, 100% 100%, 100% 41%, 100% 0%);
-    }
-
-    .hero-info {
-        text-align: center;
-        width: inherit;
-        margin: 0 auto;
-    }
-
-    .hero-info h1 {
-        font-size: 4.5rem;
-    }
-    
-    .hero-info h2 {        
-        font-size: 2.5rem;        
-    } 
-
-    .hero-btns {
-        width: inherit;
-        margin: 0 auto;
-    }
-
-}
-
-@media (max-width: 30rem) {
-    .hero-info h1 {
-        font-size: 3.2rem;
-    }
-    
-    .hero-info h2 {        
-        font-size: 2rem;        
-    }
-
-    .hero-btns {
-        flex-direction: column;
-    }
-
-    .hero-btns .btn { 
-        text-align: center;    
-        width: 10rem;
-        margin: 0 auto 2rem auto;
-    }
-}
-
-/* About Section */ 
+/* --------------------------------------- About Section --------------------------------------- */ 
 
 #about {
     display: flex;
@@ -215,7 +137,6 @@ section {
 }
 
 .about-pic {
-    width: 50%;
     display: flex;
     justify-content: center;
 }
@@ -242,7 +163,8 @@ section {
 
 .download-btns-container {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .download-btns {
@@ -271,4 +193,154 @@ section {
 #resume-btn:hover {
     background-color: #F8F7F9;
     color: #091540;
+}
+
+/* --------------------------------------- Media Queries --------------------------------------- */
+
+@media (max-width: 87.5rem) {
+    /* --------------------------------------- Hero Queries --------------------------------------- */
+    .hero-info {
+        width: 37rem;
+    }
+
+    .hero-info h1 {
+        font-size: 3.5rem;            
+    }
+    
+    .hero-info h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 75rem) {
+    /* --------------------------------------- Hero Queries --------------------------------------- */
+    .hero-info {
+        width: 20rem;
+    }
+
+    .hero-info h1 {
+        font-size: 3rem;            
+    }
+    
+    .hero-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-btns { 
+        width: 20rem;
+    }
+
+    /* --------------------------------------- About me Queries --------------------------------------- */
+
+    .about-pic-container {
+        width: 400px;
+        height: 400px;
+    }
+
+    .about-pic-container img {
+        width: 400px;
+    }
+
+    .download-btns-container {
+        flex-direction: column;
+        text-align: center;
+        width: 17rem;
+    }
+
+    .download-btns {
+        margin: 0 0 1rem 0;
+    }
+}
+
+@media (max-width: 56.25rem) {
+    /* --------------------------------------- Hero Queries --------------------------------------- */
+    .hero-container {        
+        /* align-items: flex-start; */
+        clip-path: polygon(0 0%, 0 100%, 100% 100%, 100% 41%, 100% 0%);
+    }
+
+    .hero-info {
+        text-align: center;
+        width: inherit;
+        margin: 0 auto;
+    }
+
+    .hero-info h1 {
+        font-size: 4.5rem;
+    }
+    
+    .hero-info h2 {        
+        font-size: 2.5rem;        
+    } 
+
+    .hero-btns {
+        width: inherit;
+        margin: 0 auto;
+    }
+
+    /* --------------------------------------- About me Queries --------------------------------------- */
+
+    .about-container {
+        flex-direction: column-reverse;
+    }
+
+    .about-header h2 {
+        text-align: center;
+    }
+
+    #about p, 
+    #about li {
+        font-size: 1.2rem;
+    }
+
+    .about-info {
+        width: 100%;
+    }
+
+    .download-btns-container {
+        width: 100%;
+        align-items: center;
+
+    }
+
+    .download-btns {
+        width: 17rem;
+    }
+
+}
+
+@media (max-width: 30rem) {
+    /* --------------------------------------- Hero Queries --------------------------------------- */
+    .hero-info h1 {
+        font-size: 3.2rem;
+    }
+    
+    .hero-info h2 {        
+        font-size: 2rem;        
+    }
+
+    .hero-btns {
+        flex-direction: column;
+    }
+
+    .hero-btns .btn { 
+        text-align: center;    
+        width: 10rem;
+        margin: 0 auto 2rem auto;
+    }
+
+    /* --------------------------------------- About me Queries --------------------------------------- */
+
+    .about-pic-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-pic-container img {
+        width: 250px;
+    }
+
+    .download-btns {
+        width: 100%;
+    }
 }
