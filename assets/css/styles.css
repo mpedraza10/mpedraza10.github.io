@@ -162,11 +162,11 @@ section {
     display: flex;
     align-items: center;
 }
+
 .about-header {
     width: 90%;
     margin: 0 auto
 }
-
 
 .about-container {
     width: 90%;
@@ -195,7 +195,7 @@ section {
 }
 
 .about-interests {
-    margin-top: 1rem;
+    margin: 1rem 0 2rem 0;
 }
 
 .about-interests ul {
@@ -216,10 +216,59 @@ section {
 
 .about-pic {
     width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
-.about-pic img {
-    float: right;
-    width: 400px;
+.about-pic-container {
+    width: 500px;
+    height: 500px;
+
+    background:
+        linear-gradient(to right, #6A7FDB 2px, transparent 2px) 0 0,
+        linear-gradient(to left, #6A7FDB 2px, transparent 2px) 100% 100%,
+        linear-gradient(to bottom, #6A7FDB 2px, transparent 2px) 0 0,
+        linear-gradient(to top, #6A7FDB 2px, transparent 2px) 100% 100%;
+
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+}
+
+.about-pic-container img {
+    padding: 10px;
+    width: 500px;
     object-fit: cover;
+}
+
+.download-btns-container {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.download-btns {
+    text-decoration: none;
+    margin-right: 1rem;
+    padding: 0.5rem 1.875rem;
+    border-radius: 6px;
+}
+
+#transcript-btn {
+    border: 1px solid #091540;
+    color: #091540;
+}
+
+#transcript-btn:hover {
+    background-color: #091540;
+    color: #F8F7F9;
+}
+
+#resume-btn {
+    color: #F8F7F9;
+    background-color: #091540;
+    border: 1px solid #091540;
+}
+
+#resume-btn:hover {
+    background-color: #F8F7F9;
+    color: #091540;
 }
