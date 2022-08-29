@@ -21,6 +21,7 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
+    background-color: #F8F7F9;
 }
 
 header .container {
@@ -49,8 +50,41 @@ header a {
 header ul {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 header li {
     margin-right: 2.5rem;
+}
+
+@media (max-width: 87.5rem) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    header a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 56.25rem) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    header {
+        top: auto;
+        bottom: 0;       
+    }   
+
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 30rem) {
+    body {
+        font-size: 1.2rem;
+    }   
 }
