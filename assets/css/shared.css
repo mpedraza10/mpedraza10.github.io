@@ -12,6 +12,11 @@ body {
     font-size: 1.5rem;
 }
 
+h2 {
+    font-size: 3rem;
+    color: #091540;
+}
+
 /* Header Nav Section */ 
 
 header {
@@ -55,7 +60,7 @@ header ul {
 }
 
 header li {
-    margin-right: 2.5rem;
+    margin-left: 2.5rem;
 }
 
 @media (max-width: 87.5rem) {

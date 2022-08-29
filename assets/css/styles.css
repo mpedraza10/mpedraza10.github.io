@@ -158,6 +158,68 @@ section {
 
 /* About Section */ 
 
-svg {
+#about {
+    display: flex;
+    align-items: center;
+}
+.about-header {
+    width: 90%;
+    margin: 0 auto
+}
+
+
+.about-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-info {
+    width: 50%;
+}
+
+.about-info h3 {
+    font-size: 1.5rem;
+    color: #091540;
+    margin: 0 0 0.5rem 0;
+}
+
+.about-info p {
+    margin: 0;
+}
+
+.highlight {
+    color: #6A7FDB;
+}
+
+.about-interests {
+    margin-top: 1rem;
+}
+
+.about-interests ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.about-interests svg {
     width: 20px;
+    stroke: #6A7FDB;
+    margin-right: 1rem;
+}
+
+.about-interests li {
+    margin-bottom: 0.5rem;
+}
+
+.about-pic {
+    width: 50%;
+}
+
+.about-pic img {
+    float: right;
+    width: 400px;
+    object-fit: cover;
 }
