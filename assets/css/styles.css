@@ -63,7 +63,7 @@ section {
 
 #projects-btn:hover {
     background-color: #091540;
-    color: #F8F7F9;
+    color: #F8F7F9;    
 }
 
 #contact-btn {
@@ -74,7 +74,7 @@ section {
 
 #contact-btn:hover {
     color: #091540;
-    background-color: #F8F7F9;
+    background-color: #F8F7F9;    
 }
 
 @media (max-width: 87.5rem) {
