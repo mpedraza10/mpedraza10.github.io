@@ -210,24 +210,47 @@ section {
 }
 
 .resume-title {    
-    margin-top: 10vh;
+    margin-top: 10vh;    
     grid-column: 1 / span 2;
 }
 
-.resume-education {
-    grid-column: 1 / span 2;
+.resume-title h2 {
+    margin-bottom: 0;
+}
+
+.resume-section-title h3 {
+    color: #091540;
 }
 
 .resume-info h3 {
-    font-size: 1.2rem;
+    font-size: 1.2rem;    
 }
 
 .resume-info p {
     font-size: 1.1rem;
 }
 
+/* .resume-info-skills-container {
+    display: flex;        
+} */
+
+/* .resume-info-skills {
+    margin-right: 1rem;    
+} */
+
 .resume-info-skills h3 {
     font-size: 1.2rem;
+}
+
+.resume-info-skills ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;    
+}
+
+.resume-info-skills i {
+    margin-right: 1rem;
+    color: #6A7FDB;
 }
 
 .resume-info-skills li {
@@ -236,11 +259,20 @@ section {
 
 .resume-info .duration {
     font-size: 0.8rem;
-    color: #838383;
+    font-style: italic;
+    color: #6A7FDB;
 }
+
+.resume-download-btn {
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+
+/* --------------------------------------- Projects Section --------------------------------------- */
 
 /* --------------------------------------- Media Queries --------------------------------------- */
 
+/* 1400px */
 @media (max-width: 87.5rem) {
     /* --------------------------------------- Hero Queries --------------------------------------- */
     .hero-info {
@@ -256,6 +288,7 @@ section {
     }
 }
 
+/* 1200px */
 @media (max-width: 75rem) {
     /* --------------------------------------- Hero Queries --------------------------------------- */
     .hero-info {
@@ -296,6 +329,7 @@ section {
     }
 }
 
+/* 900px */
 @media (max-width: 56.25rem) {
     /* --------------------------------------- Hero Queries --------------------------------------- */
     .hero-container {        
@@ -351,8 +385,18 @@ section {
         width: 17rem;
     }
 
-}
+    /* --------------------------------------- Resume Queries --------------------------------------- */
 
+    .resume-title {
+        text-align: center;
+    }
+
+    .resume-content div {
+        grid-column: 1 / span 2;
+    }
+}   
+
+/* 480px */
 @media (max-width: 30rem) {
     /* --------------------------------------- Hero Queries --------------------------------------- */
     .hero-info h1 {
