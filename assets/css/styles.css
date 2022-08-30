@@ -195,6 +195,50 @@ section {
     color: #091540;
 }
 
+/* --------------------------------------- Resume Section --------------------------------------- */ 
+
+#resume {
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.resume-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+}
+
+.resume-title {    
+    margin-top: 10vh;
+    grid-column: 1 / span 2;
+}
+
+.resume-education {
+    grid-column: 1 / span 2;
+}
+
+.resume-info h3 {
+    font-size: 1.2rem;
+}
+
+.resume-info p {
+    font-size: 1.1rem;
+}
+
+.resume-info-skills h3 {
+    font-size: 1.2rem;
+}
+
+.resume-info-skills li {
+    font-size: 1.1rem;
+}
+
+.resume-info .duration {
+    font-size: 0.8rem;
+    color: #838383;
+}
+
 /* --------------------------------------- Media Queries --------------------------------------- */
 
 @media (max-width: 87.5rem) {
