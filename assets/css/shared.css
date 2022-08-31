@@ -1,204 +1,77 @@
+/* --------------------------------------- Variables --------------------------------------- */
+:root {
+    /* Header height */
+    --header-height: 3rem;
+
+    /* Colors */
+    --primary-color: #091540;
+    --secondary-color: #091540;
+    --body-color: #1A1A1A;
+    --white-color: #F8F7F9;
+
+    /* Font family */
+    --body-font: 'Nunito', sans-serif;
+
+    /* Font sizes */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 0.938rem;    
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+}
+
+/* Font sizes for larger devices */ 
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;    
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
 /* --------------------------------------- Global changes --------------------------------------- */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    color: #1A1A1A;
-    font-family: 'Nunito', sans-serif;
-    background-color: #F8F7F9;
-    font-size: 1.5rem;
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    color: var(--body-color);
+    background-color: var(--white-color);
+    font-size: var(--normal-font-size);
 }
 
-aside {
-    display: none;
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
 }
 
-h2 {
-    font-size: 3rem;
-    color: #091540;
-}
-
-/* --------------------------------------- Header Nav Section - Desktop --------------------------------------- */
-
-header {
-    width: 100%;
-    height: 10vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #F8F7F9;
-}
-
-header .container {
-    width: 90%;
-    height: inherit;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header a,
-aside a {    
-    text-decoration: none;
-    font-size: 1.125rem;
-    color: #091540;
-}
-
-#logo {
-    font-size: 1.25rem;
-    color: #091540;
-}
-
-#logo span {
-    font-size: 1.875rem;
-}
-
-nav a {
-    position: relative;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    background-color: #6A7FDB;
-    height: 3px;
-    width: 0;
-    left: 0;
-    bottom: -10px;
-    transition: 0.3s;
-}
-
-nav a:hover:after {
-    width: 100%;
-}
-
-nav a:hover {
-    color: #6A7FDB;
-}
-
-header ul,
-aside ul {
+ul {
     list-style: none;
-    display: flex;
     margin: 0;
     padding: 0;
 }
 
-header li {
-    margin-left: 2.5rem;
+a {
+    text-decoration: none;
 }
 
-/* --------------------------------------- Header Nav Section - Mobile --------------------------------------- */
-
-aside {
+img {
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #F8F7F9;
-}
-
-aside .container {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.grid {
-    display: grid;
-    gap: 1.5rem;
-}
-
-aside i {
-    color: #6A7FDB;
-}
-
-.nav_toggle {
-    cursor: pointer;
-    font-size: 1.1rem;
-}
-
-.nav_menu {
-    text-align: center;
-    width: 100%;
-    padding: 2rem 2.5rem 4rem;
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 1.5rem 1.5rem 0 0;
-    transition: 0.3s;
-    z-index: 2;
-    background-color: #F8F7F9;
-}
-
-.nav_list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.nav_close {
-    position: absolute;
-    right: 1.3rem;
-    bottom: 0.5rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-aside .show-menu {
-    bottom: 0;
-}
-
-/* --------------------------------------- Media Queries --------------------------------------- */
-
-@media (max-width: 87.5rem) {
-    body {
-        font-size: 1.2rem;
-    }
-
-    header a {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 56.25rem) {
-    body {
-        font-size: 1.5rem;
-    }
-
-    header {
-        display: none;
-    }
-
-    aside {
-        display: block;
-    }
-
-    .nav_menu {
-        width: 100%;
-        position: fixed;
-        bottom: -100%;
-        left: 0;
-        z-index: 1;
-    }
-
-}
-
-@media (max-width: 30rem) {
-    body {
-        font-size: 1.2rem;
-    }   
-
-    .nav_menu a {
-        font-size: 1rem;
-    }
-    
-    .nav_list {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    height: auto;
 }

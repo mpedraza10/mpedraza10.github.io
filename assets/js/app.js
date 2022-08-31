@@ -16,6 +16,14 @@ if (closeNavBtn) {
     });
 }
 
+const navLink = document.querySelectorAll('.nav-link');
+
+function linkAction() {
+    navMenu.classList.remove('show-menu');
+}
+
+navLink.forEach(n => n.addEventListener('click', linkAction));
+
 // --------------------------------------- Change projects visibility ---------------------------------------
 
 // Variables with the div that contains the specific projects
