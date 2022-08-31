@@ -440,8 +440,7 @@ header {
 
 .projects-content img {
     width: 100%;
-    border-radius: 0.5rem;
-    object-fit: cover;
+    border-radius: 0.5rem;    
     justify-self: center;
 }
 
