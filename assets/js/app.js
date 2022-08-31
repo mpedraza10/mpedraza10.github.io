@@ -1,3 +1,23 @@
+// --------------------------------------- Nav controller ---------------------------------------
+
+const navMenu = document.getElementById('nav_menu');
+const navBtn = document.getElementById('nav-toggle');
+const closeNavBtn = document.getElementById('nav-close');
+
+if (navBtn) {
+    navBtn.addEventListener('click', () => {
+        navMenu.classList.add('show-menu');
+    });
+}
+
+if (closeNavBtn) {
+    closeNavBtn.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+    });
+}
+
+// --------------------------------------- Change projects visibility ---------------------------------------
+
 // Variables with the div that contains the specific projects
 const frontEndProjects = document.querySelector('.frontend-projects');
 const pythonProjects = document.querySelector('.python-projects');

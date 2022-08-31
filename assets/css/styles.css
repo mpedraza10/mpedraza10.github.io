@@ -201,6 +201,7 @@ section {
     height: auto;
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 10rem;
 }
 
 .resume-content {
@@ -270,8 +271,41 @@ section {
 
 /* --------------------------------------- Projects Section --------------------------------------- */
 
+#projects {
+    display: flex;
+    align-items: center;
+}
+
+.projects-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
 .hide {
     display: none;
+}
+
+.projects-btns {
+    display: flex;
+    justify-content: center;
+}
+
+.projects-btns button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font: inherit;
+    font-size: 1.2rem;
+    background-color: #F8F7F9;
+    color: #091540;
+    border: 1px solid #091540;
+    border-radius: 10px;
+    margin-left: 1rem;
+}
+
+.projects-btns button:hover {
+    color: #F8F7F9;
+    background-color: #6A7FDB;
+    border-color: #6A7FDB;
 }
 
 /* --------------------------------------- Media Queries --------------------------------------- */

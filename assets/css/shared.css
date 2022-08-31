@@ -1,15 +1,19 @@
-/* Global changes */ 
+/* --------------------------------------- Global changes --------------------------------------- */
 * {
     box-sizing: border-box;
-    color: #1A1A1A;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    color: #1A1A1A;
     font-family: 'Nunito', sans-serif;
     background-color: #F8F7F9;
     font-size: 1.5rem;
+}
+
+aside {
+    display: none;
 }
 
 h2 {
@@ -17,7 +21,7 @@ h2 {
     color: #091540;
 }
 
-/* Header Nav Section */ 
+/* --------------------------------------- Header Nav Section - Desktop --------------------------------------- */
 
 header {
     width: 100%;
@@ -38,9 +42,11 @@ header .container {
     align-items: center;
 }
 
-header a {    
+header a,
+aside a {    
     text-decoration: none;
     font-size: 1.125rem;
+    color: #091540;
 }
 
 #logo {
@@ -59,7 +65,7 @@ nav a {
 nav a::after {
     content: "";
     position: absolute;
-    background-color: #091540;
+    background-color: #6A7FDB;
     height: 3px;
     width: 0;
     left: 0;
@@ -71,7 +77,12 @@ nav a:hover:after {
     width: 100%;
 }
 
-header ul {
+nav a:hover {
+    color: #6A7FDB;
+}
+
+header ul,
+aside ul {
     list-style: none;
     display: flex;
     margin: 0;
@@ -81,6 +92,69 @@ header ul {
 header li {
     margin-left: 2.5rem;
 }
+
+/* --------------------------------------- Header Nav Section - Mobile --------------------------------------- */
+
+aside {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #F8F7F9;
+}
+
+aside .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+aside i {
+    color: #6A7FDB;
+}
+
+.nav_toggle {
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.nav_menu {
+    text-align: center;
+    width: 100%;
+    padding: 2rem 2.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.3s;
+    z-index: 2;
+    background-color: #F8F7F9;
+}
+
+.nav_list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.nav_close {
+    position: absolute;
+    right: 1.3rem;
+    bottom: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+aside .show-menu {
+    bottom: 0;
+}
+
+/* --------------------------------------- Media Queries --------------------------------------- */
 
 @media (max-width: 87.5rem) {
     body {
@@ -98,17 +172,33 @@ header li {
     }
 
     header {
-        top: auto;
-        bottom: 0;
-    }   
-
-    nav {
         display: none;
     }
+
+    aside {
+        display: block;
+    }
+
+    .nav_menu {
+        width: 100%;
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        z-index: 1;
+    }
+
 }
 
 @media (max-width: 30rem) {
     body {
         font-size: 1.2rem;
     }   
+
+    .nav_menu a {
+        font-size: 1rem;
+    }
+    
+    .nav_list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

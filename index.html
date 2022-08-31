@@ -31,6 +31,39 @@
       </div>
     </header>
 
+    <!-- Navbar mobile Section -->
+    <aside>
+      <div class="container">
+        <a id="logo" href="#home"><span>M</span>iguel <span>P</span>edraza</a>
+        <nav class="nav_menu" id="nav_menu">
+          <ul class="nav_list grid">
+            <li class="nav_item">
+              <a href="#home">Home</a>
+            </li>
+            <li class="nav_item">
+              <a href="#about">About</a>
+            </li>
+            <li class="nav_item">
+              <a href="#resume">Resume</a>
+            </li>
+            <li class="nav_item">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="nav_item">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>  
+          <i class="fa-solid fa-xmark nav_close" id="nav-close"></i>    
+        </nav>
+        
+        <div class="nav_btns">
+          <div class="nav_toggle">
+            <i class="fa-solid fa-bars" id="nav-toggle"></i>
+          </div>
+        </div>        
+      </div>
+    </aside>
+
     <!-- Main Section -->
     <main>
       <section id="home">
@@ -271,12 +304,13 @@
       <section id="projects">
         <div class="projects-container">
           <div class="projects-main-title">
-            <h2>Projects</h2>
-            <p>These are some of the projects I have completed using different technologies including Python, C++, HTML, CSS, JS, and Swift.</p>
-            <button id="frontend-btn">Front-End</button>
-            <button id="python-btn">Python</button>
-            <button id="cplusplus-btn">C++</button>
-            <button id="swift-btn">Swift</button>
+            <h2>Projects</h2>            
+            <div class="projects-btns">
+              <button id="frontend-btn">Front-End</button>
+              <button id="python-btn">Python</button>
+              <button id="cplusplus-btn">C++</button>
+              <button id="swift-btn">Swift</button>
+            </div>
           </div>
           <div class="frontend-projects">
             <p>Front end projects</p>
