@@ -1,6 +1,6 @@
-// --------------------------------------- Nav controller ---------------------------------------
+// --------------------------------------- Header Nav controller ---------------------------------------
 
-const navMenu = document.getElementById('nav_menu');
+const navMenu = document.getElementById('nav-menu');
 const navBtn = document.getElementById('nav-toggle');
 const closeNavBtn = document.getElementById('nav-close');
 
