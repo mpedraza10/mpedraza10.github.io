@@ -145,6 +145,29 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
+// --------------------------------------- Contact EmailJS ---------------------------------------
+
+const btn = document.getElementById('contact-submit-btn');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_vmt3w34';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+
 // --------------------------------------- Footer ---------------------------------------
 
 const year = new Date().getFullYear();

@@ -657,7 +657,7 @@ footer {
     .social-media {
         position: fixed;
         left: 0;
-        top: 48%;
+        top: 50%;
         margin: 0;
         z-index: 1000;        
     }
@@ -785,7 +785,7 @@ footer {
     }
 
     .content-img {
-        width: 50%;
+        width: 50%;        
         border-right: 1px solid var(--primary-color);
     }
 
