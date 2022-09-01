@@ -596,6 +596,10 @@ footer {
         padding: 6rem 0 2rem;
     }
 
+    .section-title {
+        text-align: left;
+    }
+
     body {
         margin: 0;
     }
@@ -654,7 +658,8 @@ footer {
         position: fixed;
         left: 0;
         top: 48%;
-        margin: 0;        
+        margin: 0;
+        z-index: 1000;        
     }
 
     .social-media ul {
@@ -798,4 +803,21 @@ footer {
     }
 
     /* --------------------------------------- Media queries for contact --------------------------------------- */
+
+    .contact form {
+        padding: 2rem;        
+        grid-template-columns: 1fr 1fr;
+        border-radius: 6px;
+        width: 60%;        
+        margin: 0 auto;
+    }
+
+    .contact .subject,
+    .contact .message {
+        grid-column: 1 / span 2;
+    }
+ 
+    #contact-submit-btn {        
+        margin: 0;
+    }
 }
