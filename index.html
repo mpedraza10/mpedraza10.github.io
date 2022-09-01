@@ -29,7 +29,7 @@
         <div class="nav-menu" id="nav-menu">
           <ul class="nav-list grid">
             <li class="nav-item">
-              <a href="#home" class="nav-link">
+              <a href="#home" class="nav-link active-link">
                 <i class="uil uil-home"></i>Home
               </a>
             </li>
@@ -101,8 +101,8 @@
                   </p>
                 </div>
                 <div class="home-btns">
-                  <a class="btn" id="projects-btn" href="#">Projects</a>
-                  <a class="btn" id="contact-btn" href="#">Contact</a>
+                  <a class="btn" id="projects-btn" href="#projects">Projects</a>
+                  <a class="btn" id="contact-btn" href="#contact">Contact</a>
                 </div>
               </div>
             </div>
@@ -209,15 +209,15 @@
               </div>
 
               <div class="download-btns-container">            
-                <a href="/files/Transcript.pdf" download="Miguel-Pedraza-Transcript" id="transcript-btn" class="download-btns">Download Transcript</a>
-                <a href="/files/Resume.pdf" download="Miguel-Pedraza-Resume" id="resume-btn" class="download-btns">Download Résumé</a>
+                <a href="/files/Transcript.pdf" download="Miguel-Pedraza-Transcript" id="transcript-btn" class="download-btns">Download Transcript <i class="uil uil-import"></i></a>
+                <a href="/files/Resume.pdf" download="Miguel-Pedraza-Resume" id="resume-btn" class="download-btns">Download Résumé <i class="uil uil-import"></i></a>
               </div>
             </div>            
           </div>
         </div>
       </section>
 
-      <!-- --------------------------------------- Home Section --------------------------------------- -->
+      <!-- --------------------------------------- Resume Section --------------------------------------- -->
 
       <section id="resume">
         <div class="resume container">
@@ -400,9 +400,9 @@
                 <div class="projects-content swiper-slide">
                   <div class="content-data">
                     <img src="/images/TTT-python-project.jpg" alt="Image of Tic-Tac-Toe project">
-                    <h3 class="portfolio-title">Terminal Tic-Tac-Toe mini-game</h3>
+                    <h3 class="portfolio-title">Terminal Tic-Tac-Toe</h3>
                     <p class="portfolio-description">
-                      Python game to play in terminal, implementing basic concepts like cycles, functions, global variables, lists, etc.
+                      Python terminal mini-game, implementing basic concepts like cycles, functions, global variables, lists, etc.
                     </p>
                     <a href="https://github.com/mpedraza10/Tic-Tac-Toe" target="_blank" class="portfolio-btn">
                       <i class="uil uil-github"></i> Code
@@ -413,7 +413,7 @@
                 <div class="projects-content swiper-slide">                
                   <div class="content-data">
                     <img src="/images/rps-python-project.jpg" alt="Image of Rock paper and scisors project">
-                    <h3 class="portfolio-title">Terminal Rock, Paper and Scissors mini-game</h3>
+                    <h3 class="portfolio-title">Terminal Rock, Paper and Scissors</h3>
                     <p class="portfolio-description">
                       Python game to play in terminal, implementing basic concepts like loops, functions, global variables, validation, etc.
                     </p>
@@ -446,17 +446,100 @@
               <!-- Add Pagination -->
               <div class="swiper-pagination"></div>                      
             </div>
-            <div class="cplusplus-projects hide">
-              <p>C++ projects</p>
+            <div class="cplusplus-projects hide swiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="projects-content swiper-slide">
+                  <div class="content-data">
+                    <img src="/images/sortingAlgo-cplusplus-project.jpg" alt="Image of sorting algorithms system">
+                    <h3 class="portfolio-title">Terminal sorting algorithms system</h3>
+                    <p class="portfolio-description">
+                      C++ terminal program, implementing the basic sorting algorithms to compare the difference in efficiency in time and complexity of the algorithm.
+                    </p>
+                    <a href="https://github.com/mpedraza10/sortingAlgorithms" target="_blank" class="portfolio-btn">
+                      <i class="uil uil-github"></i> Code
+                    </a>
+                  </div>
+                </div>              
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next">
+                <i class="uil uil-angle-right portfolio-swipper-icon"></i>
+              </div>
+              <div class="swiper-button-prev">
+                <i class="uil uil-angle-left portfolio-swipper-icon"></i>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
             </div>
-            <div class="swift-projects hide">
-              <p>Swift projects</p>
+            <div class="swift-projects hide swiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="projects-content swiper-slide">
+                  <div class="content-data">
+                    <img src="/images/PocketGarden-swift-project.png" alt="Image of Pocket-Garden app logo">
+                    <h3 class="portfolio-title">Pocket-Garden</h3>
+                    <p class="portfolio-description">
+                      Mobile iOS app connected to a Firebase database to control and access data obtained 
+                      by sensors working with NodeMCU. Featureas include temperature monitoring, humidity of the plant, detect rain, among other things.
+                    </p>
+                    <a href="https://github.com/mpedraza10/Pocket-Garden" target="_blank" class="portfolio-btn">
+                      <i class="uil uil-github"></i> Code
+                    </a>
+                  </div>
+                </div>              
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next">
+                <i class="uil uil-angle-right portfolio-swipper-icon"></i>
+              </div>
+              <div class="swiper-button-prev">
+                <i class="uil uil-angle-left portfolio-swipper-icon"></i>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
             </div>
           </div>         
         </div>
       </section>
 
-    </main>
+      <!-- --------------------------------------- Contact Section --------------------------------------- -->
 
+      <section id="contact">
+        <div class="contact container">
+          <h2 class="section-title">Contact me</h2>
+          <form action="">
+            <div>
+              <label for="contact-name">Name:</label>
+              <input type="text" name="contact-name" id="contact-name" required>
+            </div>
+
+            <div>
+              <label for="contact-email">Email:</label>
+              <input type="email" name="contact-email" id="contact-email" required>
+            </div>
+
+            <div>
+              <label for="contact-subject">Subject:</label>
+              <input type="text" name="contact-subject" id="contact-subject" required>
+            </div>
+
+            <div>
+              <label for="contact-message">Message:</label>
+              <textarea name="contact-message" id="contact-message" cols="30" rows="10" required></textarea>
+            </div>
+
+            <div>
+              <button type="submit" id="contact-submit-btn">Submit <i class="uil uil-message" class="contact-send-icon"></i></button>              
+            </div>
+          </form>
+        </div>
+      </section>
+      
+      <!-- --------------------------------------- Footer Section --------------------------------------- -->
+      <footer>
+      </footer>
+
+    </main>
   </body>
 </html>
