@@ -450,7 +450,8 @@ header {
 }
 
 .projects-content img {
-    width: 100%;            
+    width: 100%;
+    object-fit: cover;            
     justify-self: center;
     border-bottom: 1px solid var(--primary-color);    
 }
@@ -575,7 +576,7 @@ textarea:focus {
     color: var(--primary-color);
 }
 
-/* --------------------------------------- Contact section --------------------------------------- */
+/* --------------------------------------- footer section --------------------------------------- */
 
 footer {
     text-align: center;
@@ -699,6 +700,13 @@ footer {
 
     /* --------------------------------------- Media queries for about me --------------------------------------- */
 
+    #about {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .about-info {
         display: flex;
         flex-direction: row-reverse;        
@@ -739,4 +747,55 @@ footer {
     
     /* --------------------------------------- Media queries for resume --------------------------------------- */
 
+    .resume-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .resume-download-btn {
+        grid-column: 1 / span 2;
+    }
+
+    /* --------------------------------------- Media queries for projects --------------------------------------- */
+
+    #projects {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .swiper {        
+        max-width: 820px;
+        margin: 0 auto;   
+    }
+
+    .content-data {     
+        display: flex;
+        align-items: center;                     
+    }
+
+    .content-data-info {
+        width: 50%;
+        padding: 0 1rem;
+    }
+
+    .content-img {
+        width: 50%;
+        border-right: 1px solid var(--primary-color);
+    }
+
+    .content-data .content-img img {        
+        border-bottom: none;        
+    }    
+
+    .swiper-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .portfolio-btn {
+        max-width: 7rem;
+    }
+
+    /* --------------------------------------- Media queries for contact --------------------------------------- */
 }
