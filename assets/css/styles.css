@@ -25,13 +25,13 @@
 /* Font sizes for larger devices */ 
 @media screen and (min-width: 968px) {
     :root {
-        --big-font-size: 3rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;    
-        --small-font-size: 0.875rem;
-        --smaller-font-size: 0.813rem;
+        --big-font-size: 4rem;
+        --h1-font-size: 3rem;
+        --h2-font-size: 2rem;
+        --h3-font-size: 1.5rem;
+        --normal-font-size: 1.25rem;    
+        --small-font-size: 1rem;
+        --smaller-font-size: 0.938rem;
     }
 }
 
@@ -200,15 +200,14 @@ header {
 
 /* --------------------------------------- Sidebar --------------------------------------- */
 
-/* aside {    
-    position: absolute;
-    left: 0;
-    top: 50%
+.social-media {
+    max-width: 6.25rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
 }
 
-.social-media {
-    display: flex;
-    flex-direction: column;
+.social-media ul {
+    display: flex;    
     justify-content: space-between;
     align-items: center;
 }
@@ -220,7 +219,7 @@ header {
 
 .social-media i:hover {
     color: var(--secondary-color);
-} */
+} 
 
 /* --------------------------------------- Home --------------------------------------- */
 
@@ -289,7 +288,7 @@ header {
 
 /* --------------------------------------- About me section --------------------------------------- */
 
-.about-pic-container {
+.about-pic-border {
     width: auto;
     max-width: 400px;
     margin: 0 auto;
@@ -304,7 +303,7 @@ header {
     background-size: 50px 50px;
 }
 
-.about-pic-container img {
+.about-pic-border img {
     padding: 0.625rem;    
     object-fit: cover;
     justify-self: center;
@@ -442,10 +441,18 @@ header {
     padding: 0 1.5rem;
 }
 
+.content-data {
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 .projects-content img {
-    width: 100%;
-    border-radius: 0.5rem;    
+    width: 100%;            
     justify-self: center;
+    border-bottom: 1px solid var(--primary-color);    
 }
 
 .portfolio-title {
@@ -454,7 +461,7 @@ header {
     margin: 0.5rem 0;
 }
 
-.section-description {
+.section-description {    
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -483,6 +490,7 @@ header {
 
 .swiper {
     overflow: initial;
+    max-width: 31.25rem;
 }
 
 .swiper-button-next::after,
@@ -579,3 +587,156 @@ footer {
 
 /* --------------------------------------- Media queries --------------------------------------- */
 
+@media screen and (min-width: 769px) {
+
+    /* --------------------------------------- Media queries for global --------------------------------------- */    
+
+    section {
+        padding: 6rem 0 2rem;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    /* --------------------------------------- Media queries for header --------------------------------------- */    
+
+    header {
+        top: 0;
+        left: 0;
+        bottom: initial;
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    header i {
+        display: none;
+    }
+
+    .nav {
+        height: inherit;
+    }
+
+    .nav-list {
+        display: flex;
+    }
+
+    .nav-menu {
+        margin-left: auto;
+    }
+
+    .nav-link {
+        position: relative;
+    }
+
+    .nav-link::after {
+        content: " ";
+        position: absolute;
+        background-color: #6A7FDB;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+    }
+    
+    .nav-link:hover:after {
+        width: 100%;
+    }
+    
+    .nav-link:hover {
+        color: #6A7FDB;
+    }
+
+    /* --------------------------------------- Media queries for social media --------------------------------------- */
+
+    .social-media {
+        position: fixed;
+        left: 0;
+        top: 48%;
+        margin: 0;        
+    }
+
+    .social-media ul {
+        flex-direction: column;
+    }
+
+    /* --------------------------------------- Media queries for home --------------------------------------- */
+
+
+    .hero-background {
+        height: inherit;
+        background-color: #091540;
+    }
+    
+    .hero {
+        height: inherit;
+        background-color: #F8F7F9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        clip-path: polygon(0 0, 0 100%, 40% 100%, 100% 10%, 100% 0);
+    }
+
+    .home-content {
+        width: 65%;
+        text-align: left;
+    }
+
+    .home-description {
+        width: 95%;
+    }   
+
+    .home-btns {
+        flex-direction: row;
+        width: 50%;
+        /* justify-content: space-between; */
+    }
+
+    .home-btns .btn {
+        text-align: center;
+        margin: 0 3rem 0 0;
+    }
+
+    /* --------------------------------------- Media queries for about me --------------------------------------- */
+
+    .about-info {
+        display: flex;
+        flex-direction: row-reverse;        
+    }
+
+    .about-info-content {
+        text-align: left;
+        width: 70%;
+        margin-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-description {
+        text-align: left;
+    }
+
+    .about-pic-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .download-btns-container {
+        margin-top: 2rem;
+        flex-direction: row;
+        width: 70%;
+    }
+
+    .about-info-content .download-btns-container .download-btns {        
+        width: auto;
+        text-align: center;
+        justify-content: flex-start;
+        margin: 0 3rem 0 0;
+        padding: 0.5rem 2rem;
+    }
+    
+    /* --------------------------------------- Media queries for resume --------------------------------------- */
+
+}
