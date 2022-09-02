@@ -12,6 +12,9 @@
     <link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">    
     <!-- Swiper css -->
     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- My styles -->
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <!-- Font awesome icons -->
     <script src="https://kit.fontawesome.com/5ca58a94b8.js" crossorigin="anonymous"></script>
@@ -19,7 +22,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">emailjs.init('OLe3gRKoViJPyL9Go')</script>
     <!-- Swiper js -->
-    <script src="/assets/js/swiper-bundle.min.js" defer></script>
+    <script src="/assets/js/swiper-bundle.min.js" defer></script>    
+    <!-- My js -->
     <script src="/assets/js/app.js" defer></script>
     <title>Miguel Pedraza | Portfolio</title>
   </head>
@@ -76,7 +80,7 @@
         <div class="hero-background">
           <div class="hero">
             <div class="home container">
-              <div class="home-content">
+              <div class="home-content" data-aos="fade-right">
                 <div class="home-info">                  
                   <h1 class="home-title">Hi, I'm Miguel Pedraza</h1>
                   <h2 class="home-subtitle">Software Developer</h2>                  
@@ -84,21 +88,7 @@
                     Junior student currently enrolled in Bachelor of Science in
                     Computer Science and Technology Engineering graduating in
                     2024.
-                  </p>
-                  <div class="social-media">
-                    <ul>
-                      <li>
-                        <a href="https://github.com/mpedraza10" target="_blank">
-                          <i class="uil uil-github"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.linkedin.com/in/mpedraza/" target="_blank">
-                          <i class="uil uil-linkedin"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  </p>                  
                 </div>
                 <div class="home-btns">
                   <a class="btn" id="projects-btn" href="#projects">Projects</a>
@@ -114,17 +104,17 @@
 
       <section id="about">
         <div class="about container">
-          <h2 class="section-title">About me</h2>
+          <h2 class="section-title" data-aos="fade-down">About me</h2>
           <div class="about-content">
             <div class="about-info">
 
               <div class="about-pic-container">
                 <div class="about-pic-border">
-                  <img src="/images/picturemine.png" alt="A picture of Miguel Pedraza">
+                  <img src="/images/picturemine.png" data-aos="zoom-in-up" alt="A picture of Miguel Pedraza">
                 </div>
               </div>
 
-              <div class="about-info-content">
+              <div class="about-info-content" data-aos="fade-right">
                 <div class="about-intro">
                   <h3 class="about-subtitle">My intro</h3>
                   <p class="about-description">
@@ -225,8 +215,8 @@
 
       <section id="resume">
         <div class="resume container">
-          <h2 class="section-title">Résumé</h2>        
-          <div class="resume-content">
+          <h2 class="section-title" data-aos="fade-down">Résumé</h2>        
+          <div class="resume-content" data-aos="zoom-in">
             <div class="resume-education">
               <div class="resume-section-title">
                 <h3>Education</h3>
@@ -321,9 +311,9 @@
 
       <section id="projects">
         <div class="projects container">
-          <h2 class="section-title">Projects</h2>
-          <p class="section-description">These are some of the projects I have completed using different technologies including Python, C++, HTML, CSS, JS, and Swift.</p>
-          <div class="projects-container">
+          <h2 class="section-title" data-aos="fade-down">Projects</h2>
+          <p class="section-description" data-aos="zoom-in-up">These are some of the projects I have completed using different technologies including Python, C++, HTML, CSS, JS, and Swift.</p>
+          <div class="projects-container" data-aos="zoom-in-up">
             <div class="projects-btns">
               <button id="frontend-btn">Front-End</button>
               <button id="python-btn">Python</button>
@@ -547,34 +537,82 @@
 
       <section id="contact">
         <div class="contact container">
-          <h2 class="section-title">Contact</h2>
-          <form id="form">
-            <div class="field">
-              <label for="from_name">Name:</label>
-              <input type="text" name="from_name" id="from_name" placeholder="E.g. John" required>
-            </div>
+          <h2 class="section-title" data-aos="fade-down">Contact</h2>
 
-            <div class="field">
-              <label for="email_id">Email:</label>
-              <input type="email" name="email_id" id="email_id" placeholder="E.g. example@mail.com" required>
-            </div>
+          <div class="contact-container-flex">
+            <div class="contact-info" data-aos="fade-right">
+              <h2 class="info-title">Personal information</h2>
+              <ul>
+                <li>
+                  <div class="info-container"> 
+                    <i class="uil uil-phone"></i>
+                    <div>
+                      <h3>Call me</h3>
+                      <span>+528115863679</span>
+                    </div>                  
+                  </div>
+                </li>
+                <li>
+                  <div class="info-container">
+                    <i class="uil uil-envelope"></i>
+                    <div>
+                      <h3>Email</h3>
+                      <span>mikeped469@gmail.com</span>                    
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <h2 class="info-title">Social media</h2>
+              <ul>
+                <li>
+                  <a href="https://www.linkedin.com/in/mpedraza/" target="_blank">
+                    <i class="uil uil-linkedin"></i> LinkedIn
+                  </a>                
+                </li>
+                <li>
+                  <a href="https://github.com/mpedraza10" target="_blank">
+                    <i class="uil uil-github"></i> Github
+                  </a>
+                </li>
+              </ul>                          
+            </div>         
 
-            <div class="field message">
-              <label for="message">Message:</label>
-              <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here..." required></textarea>
-            </div>
-
-            <div class="contact-btn-container">
-              <button type="submit" value="Send Email" id="contact-submit-btn">Submit <i class="uil uil-message" class="contact-send-icon"></i></button>              
-            </div>
-          </form>
+            <form data-aos="flip-up" id="form">
+              <div class="field">
+                <label for="from_name">Name:</label>
+                <input type="text" name="from_name" id="from_name" placeholder="E.g. John" required>
+              </div>
+  
+              <div class="field">
+                <label for="email_id">Email:</label>
+                <input type="email" name="email_id" id="email_id" placeholder="E.g. example@mail.com" required>
+              </div>
+  
+              <div class="field message">
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here..." required></textarea>
+              </div>
+  
+              <div class="contact-btn-container">
+                <button type="submit" value="Send Email" id="contact-submit-btn">Submit <i class="uil uil-message" class="contact-send-icon"></i></button>              
+              </div>
+            </form>
+          </div>
+          
         </div>
       </section>
       
       <!-- --------------------------------------- Footer Section --------------------------------------- -->
       <footer>
       </footer>
-
     </main>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+        once: true
+      });
+    </script>
   </body>
 </html>

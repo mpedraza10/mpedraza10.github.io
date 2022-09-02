@@ -198,29 +198,6 @@ header {
     color: var(--secondary-color);
 }
 
-/* --------------------------------------- Sidebar --------------------------------------- */
-
-.social-media {
-    max-width: 6.25rem;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-}
-
-.social-media ul {
-    display: flex;    
-    justify-content: space-between;
-    align-items: center;
-}
-
-.social-media i {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-}
-
-.social-media i:hover {
-    color: var(--secondary-color);
-} 
-
 /* --------------------------------------- Home --------------------------------------- */
 
 #home {
@@ -528,6 +505,41 @@ header {
 
 /* --------------------------------------- Contact section --------------------------------------- */
 
+.info-title {
+    text-align: center;
+    font-size: var(--h3-font-size);
+    margin-bottom: 0.5rem;    
+    color: var(--secondary-color);
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info ul {
+    margin-bottom: 2rem;
+}
+
+.contact-info li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+}
+
+.contact-info i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.contact-info a i:hover,
+.contact-info a:hover {
+    color: var(--secondary-color);
+} 
+
 .contact form {
     display: grid;
     gap: 1rem;
@@ -596,9 +608,9 @@ footer {
         padding: 6rem 0 2rem;
     }
 
-    .section-title {
+    /* .section-title {
         text-align: left;
-    }
+    } */
 
     body {
         margin: 0;
@@ -652,20 +664,6 @@ footer {
         color: #6A7FDB;
     }
 
-    /* --------------------------------------- Media queries for social media --------------------------------------- */
-
-    .social-media {
-        position: fixed;
-        left: 0;
-        top: 50%;
-        margin: 0;
-        z-index: 1000;        
-    }
-
-    .social-media ul {
-        flex-direction: column;
-    }
-
     /* --------------------------------------- Media queries for home --------------------------------------- */
 
 
@@ -714,16 +712,17 @@ footer {
 
     .about-info {
         display: flex;
-        flex-direction: row-reverse;        
+        flex-direction: row-reverse;  
+        justify-content: space-between;
     }
 
     .about-info-content {
         text-align: left;
         width: 70%;
-        margin-right: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: flex-start;
     }
 
     .about-description {
@@ -804,12 +803,23 @@ footer {
 
     /* --------------------------------------- Media queries for contact --------------------------------------- */
 
-    .contact form {
-        padding: 2rem;        
+    .contact-container-flex {
+        display: flex;
+        justify-content: space-evenly;        
+    }
+
+    .info-title {
+        text-align: left;
+    }
+
+    .contact-info {
+        width: 30%;
+    }
+
+    .contact form {        
         grid-template-columns: 1fr 1fr;
-        border-radius: 6px;
         width: 60%;        
-        margin: 0 auto;
+        /* margin-left: auto; */
     }
 
     .contact .subject,
