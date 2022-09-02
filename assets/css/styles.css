@@ -428,7 +428,6 @@ header {
 
 .projects-content img {
     width: 100%;
-    object-fit: cover;            
     justify-self: center;
     border-bottom: 1px solid var(--primary-color);    
 }
@@ -699,6 +698,7 @@ footer {
     .home-btns .btn {
         text-align: center;
         margin: 0 3rem 0 0;
+        width: auto;
     }
 
     /* --------------------------------------- Media queries for about me --------------------------------------- */
@@ -784,12 +784,14 @@ footer {
     }
 
     .content-img {
-        width: 50%;        
+        font-size: 0;
+        line-height: 0;
+        width: 50%;                  
         border-right: 1px solid var(--primary-color);
     }
 
     .content-data .content-img img {        
-        border-bottom: none;        
+        border-bottom: none;         
     }    
 
     .swiper-wrapper {
