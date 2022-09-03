@@ -23,6 +23,8 @@
     <script type="text/javascript">emailjs.init('OLe3gRKoViJPyL9Go')</script>
     <!-- Swiper js -->
     <script src="/assets/js/swiper-bundle.min.js" defer></script>    
+    <!-- SweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <!-- My js -->
     <script src="/assets/js/app.js" defer></script>
     <title>Miguel Pedraza | Portfolio</title>
@@ -32,8 +34,8 @@
     <!-- --------------------------------------- Header Section --------------------------------------- -->
     <header>
       <nav class="nav container">
-        <a id="logo" href="#home"><span>M</span>iguel <span>P</span>edraza</a>
-        <div class="nav-menu" id="nav-menu">
+        <a id="logo" href="#home" data-aos="zoom-in-right"><span>M</span>iguel <span>P</span>edraza</a>
+        <div class="nav-menu" id="nav-menu" data-aos="zoom-in-left">
           <ul class="nav-list grid">
             <li class="nav-item">
               <a href="#home" class="nav-link active-link">
@@ -300,7 +302,7 @@
                 <p class="duration">Aug 2020 - Sep 2020</p>
               </div>
             </div>  
-            <div class="resume-download-btn">
+            <div class="resume-download-btn" data-aos="zoom-in">
               <a href="/files/Resume.pdf" download="Miguel-Pedraza-Resume" id="resume-btn" class="download-btns">Download Résumé</a>
             </div>                                      
           </div>
@@ -548,7 +550,7 @@
                     <i class="uil uil-phone"></i>
                     <div>
                       <h3>Call me</h3>
-                      <span>+528115863679</span>
+                      <a href="tel:8115863679">+528115863679</a>
                     </div>                  
                   </div>
                 </li>
@@ -557,7 +559,7 @@
                     <i class="uil uil-envelope"></i>
                     <div>
                       <h3>Email</h3>
-                      <span>mikeped469@gmail.com</span>                    
+                      <a href="mailto:mikeped469@gmail.com">mikeped469@gmail.com</a>                    
                     </div>
                   </div>
                 </li>

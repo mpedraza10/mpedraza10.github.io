@@ -165,12 +165,22 @@ document.getElementById("form").addEventListener("submit", function (event) {
 
     emailjs.sendForm(serviceID, templateID, this).then(
         () => {
-        btn.value = "Send Email";
-        alert("Sent!");
+        btn.value = "Send Email";        
+        Swal.fire({
+          title: 'Successful!',
+          text: 'Message was sent correctly',
+          icon: 'success',
+          confirmButtonText: 'Ok'
+        })
         },
         (err) => {
-        btn.value = "Send Email";
-        alert(JSON.stringify(err));
+        btn.value = "Send Email";        
+        Swal.fire({
+          title: 'Error!',
+          text: JSON.stringify(err),
+          icon: 'warning',
+          confirmButtonText: 'Ok'
+        })
         }
     );
     inputName.value = "";
