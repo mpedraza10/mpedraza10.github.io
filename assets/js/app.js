@@ -192,5 +192,4 @@ document.getElementById("form").addEventListener("submit", function (event) {
 
 const year = new Date().getFullYear();
 const date = `&copy; Miguel Pedraza ${year}. All Rights Reserved.`;
-
 document.getElementsByTagName("footer")[0].innerHTML = date;

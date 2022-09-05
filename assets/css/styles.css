@@ -805,6 +805,13 @@ footer {
 
     /* --------------------------------------- Media queries for contact --------------------------------------- */
 
+    #contact {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .contact-container-flex {
         display: flex;
         justify-content: space-evenly;        
@@ -832,4 +839,5 @@ footer {
     #contact-submit-btn {        
         margin: 0;
     }
+
 }
