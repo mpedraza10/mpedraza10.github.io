@@ -144,6 +144,7 @@ header {
 
 @media screen and (max-width: 768px) {
     .nav-menu {
+        display: none;
         position: fixed;
         bottom: -100%;
         left: 0;
@@ -191,7 +192,9 @@ header {
 }
 
 .show-menu {
+    display: block;
     bottom: 0;
+    z-index: 1000;
 }
 
 .active-link {
@@ -644,7 +647,7 @@ footer {
         display: flex;
     }
 
-    .nav-menu {
+    .nav-menu {        
         margin-left: auto;
     }
 
