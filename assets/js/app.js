@@ -34,75 +34,92 @@ const swiftProjects = document.querySelector(".swift-projects");
 
 // Buttons that show the specific project
 const frontendBtn = document.getElementById("frontend-btn");
+frontendBtn.classList.add("project-active-btn");
 const pythonBtn = document.getElementById("python-btn");
 const cPlusPlusBtn = document.getElementById("cplusplus-btn");
 const swiftBtn = document.getElementById("swift-btn");
 
 // Event to hide the rest of projects except frontend's
 frontendBtn.addEventListener("click", () => {
+  frontendBtn.classList.add("project-active-btn");
   if (frontEndProjects.classList.contains("hide")) {
     frontEndProjects.classList.remove("hide");
   }
 
   if (pythonProjects.classList.contains("hide") == false) {
     pythonProjects.classList.add("hide");
+    pythonBtn.classList.remove("project-active-btn");
   }
   if (cPlusPlusProjects.classList.contains("hide") == false) {
     cPlusPlusProjects.classList.add("hide");
+    cPlusPlusBtn.classList.remove("project-active-btn");
   }
   if (swiftProjects.classList.contains("hide") == false) {
     swiftProjects.classList.add("hide");
+    swiftBtn.classList.remove("project-active-btn");
   }
 });
 
 // Event to hide the rest of projects except python's
 pythonBtn.addEventListener("click", () => {
+  pythonBtn.classList.add("project-active-btn");
   if (pythonProjects.classList.contains("hide")) {
     pythonProjects.classList.remove("hide");
   }
 
   if (frontEndProjects.classList.contains("hide") == false) {
     frontEndProjects.classList.add("hide");
+    frontendBtn.classList.remove("project-active-btn");
   }
   if (cPlusPlusProjects.classList.contains("hide") == false) {
     cPlusPlusProjects.classList.add("hide");
+    cPlusPlusBtn.classList.remove("project-active-btn");
   }
   if (swiftProjects.classList.contains("hide") == false) {
     swiftProjects.classList.add("hide");
+    swiftBtn.classList.remove("project-active-btn");
   }
 });
 
 // Event to hide the rest of projects except c++'s
 cPlusPlusBtn.addEventListener("click", () => {
+  cPlusPlusBtn.classList.add("project-active-btn");
   if (cPlusPlusProjects.classList.contains("hide")) {
     cPlusPlusProjects.classList.remove("hide");
   }
 
   if (pythonProjects.classList.contains("hide") == false) {
     pythonProjects.classList.add("hide");
+    pythonBtn.classList.remove("project-active-btn");
   }
   if (frontEndProjects.classList.contains("hide") == false) {
     frontEndProjects.classList.add("hide");
+    frontendBtn.classList.remove("project-active-btn");
   }
   if (swiftProjects.classList.contains("hide") == false) {
     swiftProjects.classList.add("hide");
+    swiftBtn.classList.remove("project-active-btn");
   }
 });
 
 // Event to hide the rest of projects except swift's
 swiftBtn.addEventListener("click", () => {
+  swiftBtn.classList.add("project-active-btn");
   if (swiftProjects.classList.contains("hide")) {
     swiftProjects.classList.remove("hide");
   }
 
   if (pythonProjects.classList.contains("hide") == false) {
     pythonProjects.classList.add("hide");
+    pythonBtn.classList.remove("project-active-btn");
   }
   if (cPlusPlusProjects.classList.contains("hide") == false) {
     cPlusPlusProjects.classList.add("hide");
+    cPlusPlusBtn.classList.remove("project-active-btn");
   }
   if (frontEndProjects.classList.contains("hide") == false) {
     frontEndProjects.classList.add("hide");
+    frontendBtn.classList.remove("project-active-btn");
   }
 });
 

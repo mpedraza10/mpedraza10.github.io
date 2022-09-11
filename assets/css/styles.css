@@ -399,7 +399,13 @@ header {
     margin: 1rem auto 1rem auto;
 }
 
-.projects-btns button {
+.projects-btns .project-active-btn {
+    color: #F8F7F9;
+    background-color: #6A7FDB;
+    border-color: #6A7FDB;
+}
+
+.btn {
     font: inherit;
     cursor: pointer;
     padding: 0.5rem 1rem;
@@ -411,7 +417,7 @@ header {
     margin-bottom: 0.5rem;
 }
 
-.projects-btns button:hover {
+.btn:hover {
     color: #F8F7F9;
     background-color: #6A7FDB;
     border-color: #6A7FDB;
