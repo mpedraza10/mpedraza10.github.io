@@ -402,7 +402,7 @@ header {
 .projects-btns {
     display: grid;
     gap: 0.625rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .projects-btns .project-active-btn {
