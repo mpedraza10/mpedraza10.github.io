@@ -389,7 +389,7 @@ header {
     display: none;
 }
 
-.projects-btns {
+/* .projects-btns {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -397,6 +397,12 @@ header {
     align-items: center;
     width: 100%;
     margin: 1rem auto 1rem auto;
+} */
+
+.projects-btns {
+    display: grid;
+    gap: 0.625rem;
+    margin-bottom: 1rem;
 }
 
 .projects-btns .project-active-btn {
@@ -406,6 +412,7 @@ header {
 }
 
 .btn {
+    width: 7.5rem;
     font: inherit;
     cursor: pointer;
     padding: 0.5rem 1rem;
@@ -413,8 +420,7 @@ header {
     color: #091540;
     border: 1px solid #091540;
     border-radius: 10px;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin: 0 auto;
 }
 
 .btn:hover {
@@ -783,6 +789,16 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .projects-btns {
+        width: 50%;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .btn {
+        width: 8.1rem;        
     }
 
     .swiper {        
