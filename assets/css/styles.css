@@ -519,9 +519,9 @@ header {
     background-color: var(--primary-color);    
 }
 
-.swiper .swiper-button-next,
-.swiper .swiper-button-prev,
-.swiper .swiper-pagination-bullet {
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination-bullet {
     outline: none;
 }
 

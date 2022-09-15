@@ -136,8 +136,6 @@ let swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  mousewheel: true,
-  keyboard: true,
 });
 
 // --------------------------------------- Active link ---------------------------------------
