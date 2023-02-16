@@ -94,6 +94,7 @@ header nav a {
 
 .container {
 	width: 90%;
+	max-width: 80rem;
 	margin: 0 auto;
 }
 
@@ -388,15 +389,11 @@ header {
 	display: none;
 }
 
-/* .projects-btns {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    margin: 1rem auto 1rem auto;
-} */
+.projects-desktop-grid {
+	display: none;	
+	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));	
+	gap: 1rem;
+}
 
 .projects-btns {
 	display: grid;
@@ -433,6 +430,9 @@ header {
 }
 
 .content-data {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	border: 1px solid var(--primary-color);
 	border-radius: 0.5rem;
 	overflow: hidden;
@@ -460,11 +460,12 @@ header {
 .portfolio-description {
 	text-align: center;
 	margin-bottom: 1rem;
+	padding: 0 0.5rem;
 }
 
 .project-btns-container {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column;	
 }
 
 .portfolio-btn {
@@ -785,12 +786,23 @@ footer {
 	}
 
 	/* --------------------------------------- Media queries for projects --------------------------------------- */
-
-	#projects {
-		height: 100vh;
+	
+	#projects {		
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}
+
+	.projects-content {
+		padding: 0;
+	}
+
+	.projects-desktop-grid {
+		display: grid;
+	}
+
+	.projects-desktop-grid.hide {
+		display: none;
 	}
 
 	.projects-btns {
@@ -804,10 +816,10 @@ footer {
 	}
 
 	.swiper {
-		max-width: 820px;
-		margin: 0 auto;
+		display: none;
 	}
 
+	/* 
 	.content-data {
 		display: flex;
 		align-items: center;
@@ -836,11 +848,12 @@ footer {
 
 	.project-btns-container {
 		flex-direction: row;
-	}
+	} */
 
 	.portfolio-btn {
 		width: 10rem;
 	}
+	
 
 	/* --------------------------------------- Media queries for contact --------------------------------------- */
 
