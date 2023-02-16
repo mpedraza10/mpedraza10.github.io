@@ -4,7 +4,7 @@ const navMenu = document.getElementById("nav-menu");
 const navBtn = document.getElementById("nav-toggle");
 const closeNavBtn = document.getElementById("nav-close");
 
-if (navBtn) {  
+if (navBtn) {
 	navBtn.addEventListener("click", () => {
 		navMenu.classList.add("show-menu");
 	});
@@ -27,10 +27,10 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 // --------------------------------------- Change projects visibility ---------------------------------------
 
 // Variables with the div that contains the specific projects
-const frontEndProjects = document.querySelector(".frontend-projects");
-const pythonProjects = document.querySelector(".python-projects");
-const cPlusPlusProjects = document.querySelector(".cplusplus-projects");
-const swiftProjects = document.querySelector(".swift-projects");
+const frontEndProjects = document.querySelectorAll(".frontend-projects");
+const pythonProjects = document.querySelectorAll(".python-projects");
+const cPlusPlusProjects = document.querySelectorAll(".cplusplus-projects");
+const swiftProjects = document.querySelectorAll(".swift-projects");
 
 // Buttons that show the specific project
 const frontendBtn = document.getElementById("frontend-btn");
@@ -39,88 +39,97 @@ const pythonBtn = document.getElementById("python-btn");
 const cPlusPlusBtn = document.getElementById("cplusplus-btn");
 const swiftBtn = document.getElementById("swift-btn");
 
+function removeHideFromProjects(projects) {
+	for (const project of projects) {
+		if (project.classList.contains("hide")) {
+			project.classList.remove("hide");
+		}
+	}
+}
+
+function addHideToProjects(projects) {
+	for (const project of projects) {		
+		if (project.classList.contains("hide") == false) {
+			project.classList.add("hide");			
+		}
+	}
+}
+
 // Event to hide the rest of projects except frontend's
 frontendBtn.addEventListener("click", () => {
-	frontendBtn.classList.add("project-active-btn");
-	if (frontEndProjects.classList.contains("hide")) {
-		frontEndProjects.classList.remove("hide");
-	}
+	frontendBtn.classList.add("project-active-btn");	
 
-	if (pythonProjects.classList.contains("hide") == false) {
-		pythonProjects.classList.add("hide");
-		pythonBtn.classList.remove("project-active-btn");
-	}
-	if (cPlusPlusProjects.classList.contains("hide") == false) {
-		cPlusPlusProjects.classList.add("hide");
-		cPlusPlusBtn.classList.remove("project-active-btn");
-	}
-	if (swiftProjects.classList.contains("hide") == false) {
-		swiftProjects.classList.add("hide");
-		swiftBtn.classList.remove("project-active-btn");
-	}
+	// Show frontend projects
+	removeHideFromProjects(frontEndProjects);	
+
+	// Hide python projects
+	addHideToProjects(pythonProjects);
+	pythonBtn.classList.remove("project-active-btn");
+
+	// Hide c++ projects
+	addHideToProjects(cPlusPlusProjects);
+	cPlusPlusBtn.classList.remove("project-active-btn");
+
+	// Hide swift projects
+	addHideToProjects(swiftProjects);
+	swiftBtn.classList.remove("project-active-btn");
 });
 
 // Event to hide the rest of projects except python's
 pythonBtn.addEventListener("click", () => {
 	pythonBtn.classList.add("project-active-btn");
-	if (pythonProjects.classList.contains("hide")) {
-		pythonProjects.classList.remove("hide");
-	}
+	// Show python projects
+	removeHideFromProjects(pythonProjects);	
 
-	if (frontEndProjects.classList.contains("hide") == false) {
-		frontEndProjects.classList.add("hide");
-		frontendBtn.classList.remove("project-active-btn");
-	}
-	if (cPlusPlusProjects.classList.contains("hide") == false) {
-		cPlusPlusProjects.classList.add("hide");
-		cPlusPlusBtn.classList.remove("project-active-btn");
-	}
-	if (swiftProjects.classList.contains("hide") == false) {
-		swiftProjects.classList.add("hide");
-		swiftBtn.classList.remove("project-active-btn");
-	}
+	// Hide frontend projects
+	addHideToProjects(frontEndProjects);
+	frontendBtn.classList.remove("project-active-btn");
+
+	// Hide c++ projects
+	addHideToProjects(cPlusPlusProjects);
+	cPlusPlusBtn.classList.remove("project-active-btn");
+
+	// Hide swift projects
+	addHideToProjects(swiftProjects);
+	swiftBtn.classList.remove("project-active-btn");
 });
 
 // Event to hide the rest of projects except c++'s
 cPlusPlusBtn.addEventListener("click", () => {
 	cPlusPlusBtn.classList.add("project-active-btn");
-	if (cPlusPlusProjects.classList.contains("hide")) {
-		cPlusPlusProjects.classList.remove("hide");
-	}
+	// Show c++ projects
+	removeHideFromProjects(cPlusPlusProjects);	
 
-	if (pythonProjects.classList.contains("hide") == false) {
-		pythonProjects.classList.add("hide");
-		pythonBtn.classList.remove("project-active-btn");
-	}
-	if (frontEndProjects.classList.contains("hide") == false) {
-		frontEndProjects.classList.add("hide");
-		frontendBtn.classList.remove("project-active-btn");
-	}
-	if (swiftProjects.classList.contains("hide") == false) {
-		swiftProjects.classList.add("hide");
-		swiftBtn.classList.remove("project-active-btn");
-	}
+	// Hide python projects
+	addHideToProjects(pythonProjects);
+	pythonBtn.classList.remove("project-active-btn");
+
+	// Hide frontend projects
+	addHideToProjects(frontEndProjects);
+	frontendBtn.classList.remove("project-active-btn");
+
+	// Hide swift projects
+	addHideToProjects(swiftProjects);
+	swiftBtn.classList.remove("project-active-btn");	
 });
 
 // Event to hide the rest of projects except swift's
 swiftBtn.addEventListener("click", () => {
 	swiftBtn.classList.add("project-active-btn");
-	if (swiftProjects.classList.contains("hide")) {
-		swiftProjects.classList.remove("hide");
-	}
+	// Show swift projects
+	removeHideFromProjects(swiftProjects);	
 
-	if (pythonProjects.classList.contains("hide") == false) {
-		pythonProjects.classList.add("hide");
-		pythonBtn.classList.remove("project-active-btn");
-	}
-	if (cPlusPlusProjects.classList.contains("hide") == false) {
-		cPlusPlusProjects.classList.add("hide");
-		cPlusPlusBtn.classList.remove("project-active-btn");
-	}
-	if (frontEndProjects.classList.contains("hide") == false) {
-		frontEndProjects.classList.add("hide");
-		frontendBtn.classList.remove("project-active-btn");
-	}
+	// Hide python projects
+	addHideToProjects(pythonProjects);
+	pythonBtn.classList.remove("project-active-btn");
+
+	// Hide c++ projects
+	addHideToProjects(cPlusPlusProjects);
+	cPlusPlusBtn.classList.remove("project-active-btn");
+
+	// Hide frontend projects
+	addHideToProjects(frontEndProjects);
+	frontendBtn.classList.remove("project-active-btn");	
 });
 
 // --------------------------------------- Portfolio Swipper ---------------------------------------
