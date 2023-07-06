@@ -1,0 +1,25 @@
+.home-subtitle {
+	position: relative;
+}
+
+.home-subtitle:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--white-color);
+	border-left: 2px solid var(--secondary-color);
+	animation: animate 5s steps(12) infinite;
+}
+
+@keyframes animate {
+	40%,
+	60% {
+		left: 100%;
+	}
+	100% {
+		left: 0%;
+	}
+}

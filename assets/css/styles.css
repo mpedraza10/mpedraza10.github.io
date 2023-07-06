@@ -224,6 +224,7 @@ header {
 .home-subtitle {
 	font-size: var(--h1-font-size);
 	color: var(--secondary-color);
+	font-weight: bold;
 	margin-bottom: 0.5rem;
 }
 
